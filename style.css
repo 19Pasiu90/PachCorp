@@ -1382,6 +1382,922 @@ footer{
 
 }
 
+/* =======================================================
+ *  PACHCORP MODERNIZATION v2
+ *  PART 1
+ = *====================================================== */
+
+
+/* ==========================================
+ *  Animated Background
+ = *========================================= */
+
+body{
+
+    position:relative;
+    overflow-x:hidden;
+
+    background:
+    radial-gradient(circle at top,#102248 0%,#050816 60%,#02040d 100%);
+
+}
+
+
+/* ==========================================
+ *  GRID
+ = *========================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.035) 1px,
+                    transparent 1px),
+
+                    linear-gradient(
+                        90deg,
+                        rgba(255,255,255,.035) 1px,
+                                    transparent 1px);
+
+                    background-size:50px 50px;
+
+                    opacity:.35;
+
+                    z-index:-3;
+
+}
+
+
+/* ==========================================
+ *  BLUE ORB
+ = *========================================= */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:650px;
+    height:650px;
+
+    left:-220px;
+    top:-220px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(59,168,255,.28),
+
+                    rgba(59,168,255,.08),
+
+                    transparent 72%
+
+    );
+
+    filter:blur(45px);
+
+    animation:
+
+    orbMove 18s ease-in-out infinite alternate;
+
+    pointer-events:none;
+
+    z-index:-2;
+
+}
+
+
+/* ==========================================
+ *  SECOND ORB
+ = *========================================= */
+
+.page-background{
+
+    position:fixed;
+
+    right:-260px;
+
+    bottom:-260px;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(0,255,255,.16),
+
+                    rgba(0,255,255,.05),
+
+                    transparent 70%
+
+    );
+
+    filter:blur(55px);
+
+    pointer-events:none;
+
+    z-index:-2;
+
+    animation:
+
+    orbMove2 22s ease-in-out infinite alternate;
+
+}
+
+
+/* ==========================================
+ *  Noise Overlay
+ = *========================================= */
+
+.noise{
+
+    position:fixed;
+
+    inset:0;
+
+    opacity:.035;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(#ffffff 1px,transparent 1px);
+
+    background-size:4px 4px;
+
+    z-index:-1;
+
+}
+
+
+/* ==========================================
+ *  Glass Navigation Upgrade
+ = *========================================= */
+
+header{
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.06);
+
+    transition:
+
+    all .35s ease;
+
+}
+
+
+/* ==========================================
+ *  Better Buttons
+ = *========================================= */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:
+
+    transform .25s,
+
+    box-shadow .35s,
+
+    background .35s;
+
+}
+
+
+.btn:hover{
+
+    transform:
+
+    translateY(-4px);
+
+    box-shadow:
+
+    0 12px 30px rgba(59,168,255,.30);
+
+}
+
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.30),
+
+                    transparent
+
+    );
+
+    transform:skewX(-20deg);
+
+    transition:.7s;
+
+}
+
+
+.btn:hover::before{
+
+    left:160%;
+
+}
+
+
+/* ==========================================
+ *  Glass Cards Upgrade
+ = *========================================= */
+
+.feature-card,
+.product-card,
+.contact-card,
+.hero-card,
+.stat,
+.tech{
+
+    transition:
+
+    transform .35s,
+
+    box-shadow .35s,
+
+    border-color .35s;
+
+}
+
+
+.feature-card:hover,
+.product-card:hover,
+.contact-card:hover,
+.hero-card:hover,
+.stat:hover,
+.tech:hover{
+
+    transform:
+
+    translateY(-10px);
+
+    border-color:
+
+    rgba(59,168,255,.40);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.35),
+
+    0 0 30px rgba(59,168,255,.15);
+
+}
+
+
+/* ==========================================
+ *  Logo Glow
+ = *========================================= */
+
+.logo img{
+
+    transition:
+
+    transform .35s,
+
+    filter .35s;
+
+}
+
+
+.logo:hover img{
+
+    transform:rotate(-4deg) scale(1.08);
+
+    filter:
+
+    drop-shadow(0 0 18px rgba(59,168,255,.55));
+
+}
+
+
+/* ==========================================
+ *  HERO LIGHT
+ = *========================================= */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+    height:900px;
+
+    right:-350px;
+    top:-300px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(59,168,255,.16),
+
+                    transparent 72%
+
+    );
+
+    filter:blur(70px);
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================
+ *  Animations
+ = *========================================= */
+
+@keyframes orbMove{
+
+    0%{
+
+        transform:
+
+        translate(0,0)
+        scale(1);
+
+    }
+
+    100%{
+
+        transform:
+
+        translate(120px,90px)
+        scale(1.2);
+
+    }
+
+}
+
+
+@keyframes orbMove2{
+
+    0%{
+
+        transform:
+
+        translate(0,0);
+
+    }
+
+    100%{
+
+        transform:
+
+        translate(-140px,-110px);
+
+    }
+
+}
+
+/* =======================================================
+ *  PACHCORP MODERNIZATION v2
+ *  PART 2
+ = *======================================================*/
+
+
+/* ==========================================
+ *  PHONE MOCKUP
+ = *========================================= */
+
+.phone-mockup{
+
+    position:relative;
+
+    width:340px;
+    height:690px;
+
+    margin:auto;
+
+    padding:14px;
+
+    border-radius:48px;
+
+    background:linear-gradient(
+        145deg,
+        #232323,
+        #050505
+    );
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.45),
+
+    0 0 60px rgba(59,168,255,.18);
+
+    transition:
+
+    transform .45s ease,
+
+    box-shadow .45s ease;
+
+    overflow:hidden;
+
+}
+
+.phone-mockup:hover{
+
+    transform:
+
+    rotateY(-8deg)
+    rotateX(3deg)
+    translateY(-8px);
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.55),
+
+    0 0 80px rgba(59,168,255,.30);
+
+}
+
+.phone-screen{
+
+    width:100%;
+    height:100%;
+
+    border-radius:36px;
+
+    overflow:hidden;
+
+    background:#000;
+
+}
+
+.phone-screen img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+
+/* ==========================================
+ *  PHONE NOTCH
+ = *========================================= */
+
+.phone-notch{
+
+    position:absolute;
+
+    top:10px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:120px;
+    height:24px;
+
+    border-radius:18px;
+
+    background:#111;
+
+    z-index:50;
+
+}
+
+
+/* ==========================================
+ *  GALLERY
+ = *========================================= */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(240px,1fr));
+
+    gap:35px;
+
+    margin-top:70px;
+
+}
+
+.gallery-card{
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:
+
+    rgba(255,255,255,.04);
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+    transition:
+
+    all .35s ease;
+
+    cursor:pointer;
+
+}
+
+.gallery-card img{
+
+    width:100%;
+
+    display:block;
+
+    transition:
+
+    transform .6s ease;
+
+}
+
+.gallery-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.gallery-card:hover img{
+
+    transform:
+
+    scale(1.06);
+
+}
+
+
+/* ==========================================
+ *  IMAGE OVERLAY
+ = *========================================= */
+
+.gallery-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        to top,
+
+        rgba(5,8,22,.65),
+
+                    transparent
+
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.gallery-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+/* ==========================================
+ *  BETTER TITLES
+ = *========================================= */
+
+.section-title h2{
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.section-title h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-18px;
+
+    transform:translateX(-50%);
+
+    width:80px;
+    height:4px;
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        #3ba8ff,
+        cyan
+    );
+
+}
+
+
+/* ==========================================
+ *  HERO IMAGE FLOAT
+ = *========================================= */
+
+.float-slow{
+
+    animation:
+
+    floatSlow 7s ease-in-out infinite;
+
+}
+
+@keyframes floatSlow{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+ *  GLOW BORDER
+ = *========================================= */
+
+.glow-border{
+
+    position:relative;
+
+}
+
+.glow-border::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-1px;
+
+    border-radius:inherit;
+
+    padding:1px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(59,168,255,.65),
+
+                    transparent,
+
+                    rgba(0,255,255,.45)
+
+    );
+
+    -webkit-mask:
+
+    linear-gradient(#fff 0 0) content-box,
+
+    linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    pointer-events:none;
+
+}
+
+
+/* ==========================================
+ *  SCROLL INDICATOR
+ = *========================================= */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:34px;
+
+    height:60px;
+
+    border-radius:999px;
+
+    border:
+
+    2px solid rgba(255,255,255,.35);
+
+}
+
+.scroll-indicator::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:10px;
+
+    transform:translateX(-50%);
+
+    width:6px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#3ba8ff;
+
+    animation:
+
+    scrollDown 2s infinite;
+
+}
+
+@keyframes scrollDown{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,22px);
+
+    }
+
+}
+
+
+/* ==========================================
+ *  MOBILE MENU (PREP)
+ = *========================================= */
+
+.mobile-toggle{
+
+    display:none;
+
+    cursor:pointer;
+
+    font-size:32px;
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.mobile-toggle:hover{
+
+    color:#3ba8ff;
+
+}
+
+
+/* ==========================================
+ *  SMOOTHER FADE
+ = *========================================= */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:
+
+    translateY(40px);
+
+    transition:
+
+    opacity .8s ease,
+
+    transform .8s ease;
+
+}
+
+.fade-up.visible{
+
+    opacity:1;
+
+    transform:
+
+    translateY(0);
+
+}
 /* ========================================================= */
 /* END OF FILE */
 /* ========================================================= */
